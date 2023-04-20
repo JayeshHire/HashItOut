@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'HashItOut.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'Social Media Website/'],
+        'DIRS': [os.path.join(BASE_DIR ,'Social Media Website')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,9 +119,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT =BASE_DIR / 'Social Media Website/'
+STATIC_ROOT =BASE_DIR / 'static/'
 STATIC_DIR = [
-    BASE_DIR /'static/',
+    BASE_DIR /"Social Media Website/",
     
 ]
 
