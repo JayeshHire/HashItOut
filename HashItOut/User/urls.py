@@ -5,5 +5,4 @@ urlpatterns = [
     path('home/',views.home),
     path('login',views.login),
     path('NewUser/',views.NewUser)
-
 ]
